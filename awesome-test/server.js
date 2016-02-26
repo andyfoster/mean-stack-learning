@@ -1,0 +1,1 @@
+console.log("It's my first proper node app! Hello!");
