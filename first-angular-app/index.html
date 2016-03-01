@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First Angular Application!</title>
+
+	<!-- CSS -->
+	<!-- loadbootstrap and our stylesheet -->
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		body { padding-top: 50px; }
+	</style>
+
+	<!-- JS -->
+	<!-- load Angular.js and our custom application -->
+	<script src="angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body class="container" ng-app="firstApp" ng-controller="mainController as main">
+
+<div class="jumbotron">
+<!-- Form to update the message variable use ng-model -->
+<div class="form-group">
+	<label>Message:</label>
+	<input type="text" class="form-control" ng-model="main.message"></input>
+</div>
+
+
+	<!-- Display the message -->
+	<h2>This is my message:</h2>
+	<p>{{ main.message }}</p>
+
+<!-- Display the list using ng-repeat -->
+<h2>This is my list:</h2>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Color</td>
+			<td>Nerd Level</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="computer in main.computers">
+			<td>{{ computer.name }}</td>
+			<td>{{ computer.color }}</td>
+			<td>{{ computer.nerdness }}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+</div>
+
+</body>
+</html>
