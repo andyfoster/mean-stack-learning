@@ -45,15 +45,13 @@
 	<!-- Main Content and Injected Views -->
 	<main>
 		
-		<div class="jumbotron">
+<!-- 		<div class="jumbotron">
 			<h1>{{ main.bigMessage }}</h1>
-		</div>
+		</div> -->
 
 		<!-- Angular templating will go here -->
 		<!-- This is where content will be injected -->
-		<div ng-controller="contactController as contact">
-			<p>{{ contact.mainMessage}}</p>
-		</div>
+		<div ng-view></div>
 
 	</main>
 

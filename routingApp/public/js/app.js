@@ -1,4 +1,4 @@
-angular.module('routerApp', [])
+angular.module('routerApp', ['routerRoutes'])
 
 	// Create the controllers
 	// This will be the controller for the ENTIRE site
@@ -6,7 +6,7 @@ angular.module('routerApp', [])
 		var vm = this;
 
 		// Create a bigMessage variable to display in our view
-		vm.bigMessage = 'A smooth sea never make a skilled sailor.';
+		vm.bigMessage = 'A smooth sea never a skilled sailor made.';
 	})
 
 		// Home page specific controller
@@ -18,7 +18,6 @@ angular.module('routerApp', [])
 
 		// About Page Controller
 		.controller('aboutController', function() {
-
 			var vm = this;
 
 			vm.message = 'Look! I am an about page!';
@@ -26,7 +25,6 @@ angular.module('routerApp', [])
 
 		// Contact page controlller
 		.controller('contactController', function() {
-
 			var vm = this;
 
 			vm.message = 'Contact Us! JK. This is just a demo';
